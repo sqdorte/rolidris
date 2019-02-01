@@ -1,0 +1,19 @@
+[package]
+name = "rolidris/rolidris"
+version = "0.1.0"
+authors = []
+
+[dependencies]
+
+[targets.lib]
+path = "src"
+mods = [
+  "Rolidris",
+  "Rolidris.Parser",
+  "Rolidris.Syntax"
+]
+
+[[targets.bin]]
+name = "rolidris"
+path = "src"
+main = "Main"

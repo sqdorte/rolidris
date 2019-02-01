@@ -1,0 +1,12 @@
+package rolidris
+
+sourcedir = src
+
+modules = Main
+        , Rolidris
+        , Rolidris.Parser
+        , Rolidris.Syntax
+
+main = Main
+
+opts = "--total"
