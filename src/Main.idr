@@ -1,5 +1,11 @@
 module Main
 
+import Lightyear
+import Lightyear.Char
+import Lightyear.Combinators
+import Lightyear.Strings
+import Rolidris
+
 repl : IO ()
 repl = do
   input <- putStr "Rolidris> " *> getLine
