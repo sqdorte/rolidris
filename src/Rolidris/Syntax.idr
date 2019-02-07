@@ -1,15 +1,21 @@
 module Rolidris.Syntax
 
 %access public export
-%default total
 
 Name : Type
-Name = String
+Name = List Char
 
 data Literal = LInt Int
              | LBool Bool
 
-data Expr = Var Name
-          | Lam Name Expr
-          | Cls Name Expr (List (Name, Expr))
-          | Lit Literal
+Map : Type -> Type -> Type
+Map a b = List (a, b)
+
+mutual
+  Env : Type
+  Env = Map Name AST
+  
+  data AST = Var Name
+           | Lam Name AST
+           | Cls Name AST Env
+           | Lit Literal

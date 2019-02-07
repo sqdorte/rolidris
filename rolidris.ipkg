@@ -2,11 +2,11 @@ package rolidris
 
 sourcedir = src
 
+pkgs = contrib
+
 modules = Main
         , Rolidris
         , Rolidris.Parser
         , Rolidris.Syntax
 
 main = Main
-
-opts = "--total"

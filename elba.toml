@@ -4,6 +4,7 @@ version = "0.1.0"
 authors = []
 
 [dependencies]
+"ziman/lightyear" = { git = "https://github.com/appositum/lightyear" }
 
 [targets.lib]
 path = "src"
@@ -12,8 +13,10 @@ mods = [
   "Rolidris.Parser",
   "Rolidris.Syntax"
 ]
+idris_opts = ["-p", "contrib"]
 
 [[targets.bin]]
 name = "rolidris"
 path = "src"
 main = "Main"
+idris_opts = ["-p", "contrib"]
